@@ -1,0 +1,25 @@
+/* Layout base (páginas internas) */
+.main{
+  padding: 22px 0 40px;
+}
+.page-title{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom: 16px;
+}
+.page-title .actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.kpi{
+  padding: 14px;
+}
+.kpi .label{ margin:0; }
+.kpi .value{
+  font-weight: 900;
+  font-size: 22px;
+  margin-top: 6px;
+}

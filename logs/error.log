@@ -1,0 +1,8 @@
+[2025-12-29 15:20:15] login.php -> SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)
+[2025-12-29 15:21:28] login.php -> SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+[2025-12-29 15:23:10] login.php -> SQLSTATE[HY000] [1045] Access denied for user 'mini_me_user'@'localhost' (using password: YES)
+[2025-12-29 15:23:48] login.php -> SQLSTATE[HY000] [1045] Access denied for user 'mini_me_user'@'localhost' (using password: YES)
+[2025-12-29 15:23:50] login.php -> SQLSTATE[HY000] [1045] Access denied for user 'mini_me_user'@'localhost' (using password: YES)
+[2025-12-29 15:29:11] login.php -> SQLSTATE[HY000] [1045] Access denied for user 'mini_me_user'@'localhost' (using password: YES)
+[2025-12-29 15:30:02] login.php -> SQLSTATE[HY000] [1045] Access denied for user 'mini_me_user'@'localhost' (using password: YES)
+[2025-12-29 15:32:30] login.php -> SQLSTATE[HY000] [1045] Access denied for user 'mini_me_user'@'localhost' (using password: YES)

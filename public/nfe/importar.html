@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Importar NF-e (XML) • Mini Me</title>
+
+  <!-- CSS padrão do sistema -->
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/tables.css">
+</head>
+<body>
+
+<!-- ================= HEADER PADRÃO (IGUAL AO DASHBOARD) ================= -->
+<header class="mm-header">
+  <div class="container mm-header__inner">
+    <div class="mm-brand">
+      <img src="../assets/img/logo_mini_me.jpg" alt="Mini Me">
+      <div class="mm-brand__text">
+        <div class="mm-brand__name">Mini Me</div>
+        <div class="mm-brand__tag">Moda Infantil • Sistema</div>
+      </div>
+    </div>
+
+    <nav class="mm-nav">
+      <a href="../dashboard/dashboard.html">Dashboard</a>
+      <a class="active" href="./importar.html">Importar NF-e</a>
+      <a href="../pdv/caixa.html">PDV</a>
+      <a href="../financeiro/contas_pagar.html">Contas a Pagar</a>
+      <a href="../caixa/acerto.html">Acerto de Caixa</a>
+      <a href="../etiquetas/etiquetas.html">Etiquetas</a>
+    </nav>
+
+    <button class="btn btn-ghost" id="btn_sair" type="button">Sair</button>
+  </div>
+</header>
+
+<!-- ================= CONTEÚDO ================= -->
+<main class="main">
+  <div class="container">
+
+    <div class="page-title">
+      <div>
+        <div class="h1">Importar NF-e (XML)</div>
+        <div class="small">
+          Importe NF-e modelo 55. Após importar, será necessário mapear cor/tamanho para concluir.
+        </div>
+      </div>
+    </div>
+
+    <!-- Upload XML -->
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Enviar XML</h2>
+
+        <div class="row">
+          <input type="file" id="xmlFile" accept=".xml" />
+          <button class="btn btn-primary" id="btnEnviar">Enviar</button>
+        </div>
+
+        <div id="msg" class="small mt-8"></div>
+      </div>
+    </div>
+
+    <!-- Pendências -->
+    <div class="card mt-24">
+      <div class="card-body">
+        <h2 class="card-title">Pendentes de mapeamento</h2>
+
+        <table class="table" id="tbl">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Emissão</th>
+              <th>Fornecedor</th>
+              <th>Total</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="5" class="small">Carregando...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ================= JS PADRÃO ================= -->
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/auth.js"></script>
+
+<script>
+  // 🔒 Proteção de rota
+  MiniMeAuth.requireAuth("../login/login.html");
+
+  // Logout
+  document.getElementById("btn_sair").addEventListener("click", () => {
+    MiniMeAuth.logout("../login/login.html");
+  });
+</script>
+
+<script src="./importar.js"></script>
+
+</body>
+</html>

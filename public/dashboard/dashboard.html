@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Mini Me • Dashboard</title>
+
+  <link rel="stylesheet" href="../assets/css/theme.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/tables.css">
+</head>
+<body>
+
+<header class="mm-header">
+  <div class="container mm-header__inner">
+    <div class="mm-brand">
+      <img src="../assets/img/logo_mini_me.jpg" alt="Mini Me">
+      <div class="mm-brand__text">
+        <div class="mm-brand__name">Mini Me</div>
+        <div class="mm-brand__tag">Moda Infantil • Sistema</div>
+      </div>
+    </div>
+
+    <nav class="mm-nav">
+      <a href="../nfe/importar.html">Importar NF-e</a>
+      <a href="../pdv/caixa.html">PDV</a>
+      <a href="../financeiro/contas_pagar.html">Contas a Pagar</a>
+      <a href="../caixa/acerto.html">Acerto de Caixa</a>
+      <a href="../relatorios/vendas.html">Vendas</a>
+      <a href="../etiquetas/etiquetas.html">Etiquetas</a>
+    </nav>
+
+    <button class="btn btn-ghost" id="btn_sair" type="button">Sair</button>
+  </div>
+</header>
+
+<main class="main">
+  <div class="container">
+    <div class="page-title">
+      <div>
+        <div class="h1">Dashboard</div>
+        <div class="small">Visão geral do dia • atalhos rápidos</div>
+      </div>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" id="btn_importar">Importar NF-e</button>
+        <button class="btn btn-outline" type="button" id="btn_pdv">Abrir PDV</button>
+      </div>
+    </div>
+
+    <div class="grid grid-3">
+      <div class="card kpi">
+        <div class="label">Vendas (hoje)</div>
+        <div class="value" id="kpi_vendas">R$ 0,00</div>
+        <div class="small">Entradas no caixa (Opção 1)</div>
+      </div>
+
+      <div class="card kpi">
+        <div class="label">Contas pagas (hoje)</div>
+        <div class="value" id="kpi_saidas">R$ 0,00</div>
+        <div class="small">Saídas no caixa</div>
+      </div>
+
+      <div class="card kpi">
+        <div class="label">Saldo do dia</div>
+        <div class="value" id="kpi_saldo">R$ 0,00</div>
+        <div class="small">Acerto de caixa</div>
+      </div>
+    </div>
+
+    <div class="grid grid-2 mt-24">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Atalhos</h2>
+          <div class="grid grid-2">
+            <button class="btn btn-primary" type="button" data-go="../nfe/importar.html">📥 Importar NF-e (XML)</button>
+            <button class="btn btn-outline" type="button" data-go="../etiquetas/etiquetas.html">🏷️ Etiquetas / Barcode</button>
+            <button class="btn btn-outline" type="button" data-go="../financeiro/contas_pagar.html">🧾 Contas a pagar</button>
+            <button class="btn btn-outline" type="button" data-go="../caixa/acerto.html">💰 Acerto de caixa (dia)</button>
+          </div>
+          <div class="mt-16 small">
+            Observação: esta tela é o “pacote inicial” com o padrão visual Mini Me.
+            Os números serão carregados do backend quando a API estiver pronta.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title">Status do sistema</h2>
+
+          <div class="mt-16">
+            <span class="badge success">NF-e (55) • XML</span>
+            <span class="badge warn">Mapeamento de variações obrigatório</span>
+            <span class="badge">Caixa diário</span>
+          </div>
+
+          <div class="mt-16 small">
+            Próximos módulos: Importação XML completa → Estoque → Contas a Pagar (auto + manual) → Caixa → PDV.
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/auth.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>
